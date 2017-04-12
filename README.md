@@ -26,7 +26,7 @@ At a minimum, add this line to your `Dangerfile`:
 You can also set a different project root if you need to
 
     # Set a different project root
-    danger-tailor.project_root = 'MyProject/NewRoot/'
+    danger-puppet_lint.project_root = 'MyProject/NewRoot/'
 
 ## Development
 
