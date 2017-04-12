@@ -1,6 +1,6 @@
 # danger-puppet_lint
 
-![Travis](https://travis-ci.org/IntrepidPursuits/danger-puppet_lint.svg)
+[![Build Status](https://travis-ci.org/IntrepidPursuits/danger-puppet_lint.svg?branch=master)](https://travis-ci.org/IntrepidPursuits/danger-puppet_lint)
 [![Coverage Status](https://coveralls.io/repos/github/IntrepidPursuits/danger-puppet_lint/badge.svg?branch=master)](https://coveralls.io/github/IntrepidPursuits/danger-puppet_lint?branch=master)
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
