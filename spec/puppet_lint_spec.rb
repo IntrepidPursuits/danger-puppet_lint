@@ -15,25 +15,20 @@ module Danger
         @my_plugin = @dangerfile.puppet_lint
       end
 
-      # Some examples for writing tests
-      # You should replace these with your own.
-
-      it "Warns on a monday" do
-        monday_date = Date.parse("2016-07-11")
-        allow(Date).to receive(:today).and_return monday_date
-
-        @my_plugin.warn_on_mondays
-
-        expect(@dangerfile.status_report[:warnings]).to eq(["Trying to merge code on a Monday"])
+      it 'Parses file with warnings and errors' do
+        path = File.expand_path('../test_summary.report', __FILE__)
+        @my_plugin.report(path)
+        expect(@dangerfile.status_report[:errors].length).to be == 3
+        expect(@dangerfile.status_report[:warnings].length).to be == 19
+        expect(@dangerfile.status_report[:markdowns]).to eq([])
       end
 
-      it "Does nothing on a tuesday" do
-        monday_date = Date.parse("2016-07-12")
-        allow(Date).to receive(:today).and_return monday_date
-
-        @my_plugin.warn_on_mondays
-
+      it 'Parses empty file' do
+        path = File.expand_path('../test_empty_summary.report', __FILE__)
+        @my_plugin.report(path)
+        expect(@dangerfile.status_report[:errors]).to eq([])
         expect(@dangerfile.status_report[:warnings]).to eq([])
+        expect(@dangerfile.status_report[:markdowns]).to eq([])
       end
 
     end

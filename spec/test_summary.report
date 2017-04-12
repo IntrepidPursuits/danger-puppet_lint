@@ -1,0 +1,22 @@
+.//environments/production/manifests/classes/build_scripts_repo.pp - ERROR: build_scripts_repo not in autoload module layout on line 3
+.//environments/production/manifests/classes/node_tools/common_build_tools.pp - ERROR: common_build_tools not in autoload module layout on line 4
+.//environments/production/manifests/classes/services/default_services.pp - ERROR: default_services not in autoload module layout on line 3
+.//environments/production/manifests/nodes/ci.pp - WARNING: line has more than 140 characters on line 75
+.//environments/production/manifests/nodes/ci.pp - WARNING: line has more than 140 characters on line 83
+.//environments/production/manifests/nodes/ci.pp - WARNING: line has more than 140 characters on line 91
+.//environments/production/manifests/nodes/ci.pp - WARNING: line has more than 140 characters on line 99
+.//environments/production/manifests/nodes/ci.pp - WARNING: line has more than 140 characters on line 107
+.//environments/production/manifests/nodes/ci.pp - WARNING: line has more than 140 characters on line 115
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: /* */ comment found on line 19
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: /* */ comment found on line 28
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: double quoted string containing no variables on line 31
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: double quoted string containing no variables on line 31
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: indentation of => is not properly aligned (expected in column 13, but found it in column 14) on line 30
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: indentation of => is not properly aligned (expected in column 13, but found it in column 14) on line 31
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: indentation of => is not properly aligned (expected in column 13, but found it in column 14) on line 32
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: indentation of => is not properly aligned (expected in column 13, but found it in column 14) on line 33
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: indentation of => is not properly aligned (expected in column 13, but found it in column 14) on line 34
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: unquoted node name found on line 1
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: unquoted node name found on line 1
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: unquoted node name found on line 1
+.//environments/production/manifests/nodes/puppet_master.pp - WARNING: unquoted node name found on line 1
