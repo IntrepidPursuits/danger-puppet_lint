@@ -30,7 +30,6 @@ module Danger
         expect(@dangerfile.status_report[:warnings]).to eq([])
         expect(@dangerfile.status_report[:markdowns]).to eq([])
       end
-
     end
   end
 end

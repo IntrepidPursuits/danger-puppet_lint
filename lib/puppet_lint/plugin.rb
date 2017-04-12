@@ -1,7 +1,7 @@
 module Danger
   # Shows linter errors and warnings from puppet_lint
-  # You'll need [puppet-lint](https://http://puppet-lint.com/) installed and generating a json file
-  # to use this plugin
+  # You'll need [puppet-lint](https://http://puppet-lint.com/) installed and
+  # generating a report file to use this plugin
   #
   # @example Showing summary
   #
@@ -29,10 +29,6 @@ module Danger
       root
     end
 
-    def ignored_files
-      [@ignored_files].flatten.compact
-    end
-
     def sticky_summary
       @sticky_summary || false
     end
@@ -47,35 +43,38 @@ module Danger
     end
 
     private
+
     def run_summary(report_file)
-      warningCount = 0
-      errorCount = 0
+      warning_count = 0
+      error_count = 0
 
       # Read line-by-line to determine violations
       File.readlines(report_file).each do |line|
-        if line.index("WARNING:") != nil
-          warningCount++
+        if line.index('WARNING:').nil? == false
+          warning_count += 1
           warn(format_violation(line), sticky: false)
-        elsif line.index("ERROR:") != nil
-          errorCount++
+        elsif line.index('ERROR:').nil? == false
+          error_count += 1
           fail(format_violation(line), sticky: false)
         end
       end
 
       # Record the summary
-      message(summary_message(warningCount, errorCount), sticky: sticky_summary)
+      message(summary_message(warning_count, error_count), sticky: sticky_summary)
     end
 
-    def summary_message(warningCount, errorCount)
-      violations = warningCount + errorCount
-      "Puppet-Lint Summary: Found #{violations} violations. #{warningCount} Warnings and #{errorCount} Errors."
+    def summary_message(warning_count, error_count)
+      violations = warning_count + error_count
+
+      "Puppet-Lint Summary: Found #{violations} violations. #{warning_count}
+      Warnings and #{error_count} Errors."
     end
 
     # A method that returns a formatted string for a violation
     # @return String
     #
     def format_violation(violation)
-      "#{violation}"
+      violation.to_s
     end
   end
 end
