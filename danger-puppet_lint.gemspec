@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'danger-puppet_lint'
   spec.version       = PuppetLint::VERSION
   spec.authors       = ['Patrick Butkiewicz']
-  spec.email         = ['patrick@intrepid.io']
+  spec.email         = ['pat.butkiewicz@accenture.com']
   spec.description   = %q{Shows formatted puppet lint violations using Danger}
   spec.summary       = %q{Reads puppet-lint output files and reports them using Danger}
   spec.homepage      = 'https://github.com/IntrepidPursuits/danger-puppet_lint'

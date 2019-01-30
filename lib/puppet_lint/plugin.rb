@@ -66,8 +66,7 @@ module Danger
     def summary_message(warning_count, error_count)
       violations = warning_count + error_count
 
-      "Puppet-Lint Summary: Found #{violations} violations. #{warning_count}
-      Warnings and #{error_count} Errors."
+      "Puppet-Lint Summary: Found #{violations} violations. #{warning_count} Warnings and #{error_count} Errors."
     end
 
     # A method that returns a formatted string for a violation
