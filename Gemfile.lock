@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    danger-puppet_lint (1.0.0)
+    danger-puppet_lint (1.0.2)
       danger-plugin-api (~> 1.0)
 
 GEM
